@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ActiveSpeakers_KiCad-rescue)(type Legacy)(uri ${KIPRJMOD}/ActiveSpeakers_KiCad-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,810 @@
+
+SpeakersController.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  000003e2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000036e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000009  00800100  00800100  000003e2  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000003e2  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000414  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000110  00000000  00000000  00000454  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000b2c  00000000  00000000  00000564  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000730  00000000  00000000  00001090  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000740  00000000  00000000  000017c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000294  00000000  00000000  00001f00  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000057d  00000000  00000000  00002194  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000461  00000000  00000000  00002711  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000100  00000000  00000000  00002b72  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	5c c0       	rjmp	.+184    	; 0xbc <__vector_1>
+   4:	5c c0       	rjmp	.+184    	; 0xbe <__vector_2>
+   6:	5c c0       	rjmp	.+184    	; 0xc0 <__vector_3>
+   8:	5c c0       	rjmp	.+184    	; 0xc2 <__vector_4>
+   a:	5c c0       	rjmp	.+184    	; 0xc4 <__vector_5>
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__vector_6>
+   e:	5c c0       	rjmp	.+184    	; 0xc8 <__vector_7>
+  10:	5c c0       	rjmp	.+184    	; 0xca <__vector_8>
+  12:	5c c0       	rjmp	.+184    	; 0xcc <__vector_9>
+  14:	5c c0       	rjmp	.+184    	; 0xce <__vector_10>
+  16:	5c c0       	rjmp	.+184    	; 0xd0 <__vector_11>
+  18:	5c c0       	rjmp	.+184    	; 0xd2 <__vector_12>
+  1a:	5c c0       	rjmp	.+184    	; 0xd4 <__vector_13>
+  1c:	5c c0       	rjmp	.+184    	; 0xd6 <__vector_14>
+  1e:	5c c0       	rjmp	.+184    	; 0xd8 <__vector_15>
+  20:	5c c0       	rjmp	.+184    	; 0xda <__vector_16>
+  22:	5c c0       	rjmp	.+184    	; 0xdc <__vector_17>
+  24:	51 c1       	rjmp	.+674    	; 0x2c8 <__vector_18>
+  26:	5f c0       	rjmp	.+190    	; 0xe6 <__vector_19>
+  28:	5f c0       	rjmp	.+190    	; 0xe8 <__vector_20>
+  2a:	59 c0       	rjmp	.+178    	; 0xde <__vector_21>
+  2c:	59 c0       	rjmp	.+178    	; 0xe0 <__vector_22>
+  2e:	59 c0       	rjmp	.+178    	; 0xe2 <__vector_23>
+  30:	1a c1       	rjmp	.+564    	; 0x266 <__vector_24>
+  32:	58 c0       	rjmp	.+176    	; 0xe4 <__vector_25>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	d4 e0       	ldi	r29, 0x04	; 4
+  3c:	de bf       	out	0x3e, r29	; 62
+  3e:	cd bf       	out	0x3d, r28	; 61
+
+00000040 <__do_clear_bss>:
+  40:	21 e0       	ldi	r18, 0x01	; 1
+  42:	a0 e0       	ldi	r26, 0x00	; 0
+  44:	b1 e0       	ldi	r27, 0x01	; 1
+  46:	01 c0       	rjmp	.+2      	; 0x4a <.do_clear_bss_start>
+
+00000048 <.do_clear_bss_loop>:
+  48:	1d 92       	st	X+, r1
+
+0000004a <.do_clear_bss_start>:
+  4a:	a9 30       	cpi	r26, 0x09	; 9
+  4c:	b2 07       	cpc	r27, r18
+  4e:	e1 f7       	brne	.-8      	; 0x48 <.do_clear_bss_loop>
+  50:	8a d1       	rcall	.+788    	; 0x366 <main>
+  52:	8b c1       	rjmp	.+790    	; 0x36a <_exit>
+
+00000054 <StopCommunication.1942>:
+		TWCR |= (1<<TWSTA)|(1<<TWINT)|(1<<TWEN);
+	}
+	
+	void StopCommunication ()
+	{
+		TWCR |= (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+  54:	ec eb       	ldi	r30, 0xBC	; 188
+  56:	f0 e0       	ldi	r31, 0x00	; 0
+  58:	80 81       	ld	r24, Z
+  5a:	84 69       	ori	r24, 0x94	; 148
+  5c:	80 83       	st	Z, r24
+		NextRegisterToBeSend = 0;
+  5e:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <NextRegisterToBeSend.1938>
+		UserFlags &= ~(1<<PreAmpComunicatingFlag);
+  62:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <UserFlags>
+  66:	8e 7f       	andi	r24, 0xFE	; 254
+  68:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <UserFlags>
+  6c:	08 95       	ret
+
+0000006e <InternalModulesInitialization>:
+#define M88P_INTERNALMODULESINITIALIZING_H_
+
+void InternalModulesInitialization (void) {
+	
+	// Ports initialization:
+	PORTB =	(0<<DisplayRCLK_bit) |
+  6e:	15 b8       	out	0x05, r1	; 5
+			(0<<PORTB4) |
+			(0<<PORTB5) |
+			(0<<PORTB6) |
+			(0<<PORTB7) ;
+	
+	DDRB =	(1<<DisplayRCLK_bit) |
+  70:	81 e0       	ldi	r24, 0x01	; 1
+  72:	84 b9       	out	0x04, r24	; 4
+			(0<<DDB5) |
+			(0<<DDB6) |
+			(0<<DDB7) ;
+
+
+	PORTC =	(0<<PORTC0) |
+  74:	18 b8       	out	0x08, r1	; 8
+			(0<<PORTC3) |
+			(0<<PORTC4) |
+			(0<<PORTC5) |
+			(0<<PORTC6) ;
+	
+	DDRC =	(0<<DDC0) |
+  76:	17 b8       	out	0x07, r1	; 7
+			(0<<DDC4) |
+			(0<<DDC5) |
+			(0<<DDC6) ;
+	
+
+	PORTD =	(0<<PORTD0) |
+  78:	1b b8       	out	0x0b, r1	; 11
+			(0<<PORTD4) |
+			(0<<AmpStbyPwm_bit) |
+			(0<<PORTD6) |
+			(0<<PORTD7) ;
+	
+	DDRD =	(0<<DDD0) |
+  7a:	80 e2       	ldi	r24, 0x20	; 32
+  7c:	8a b9       	out	0x0a, r24	; 10
+
+			TWAR - TWI (Slave) Address Register
+			7:1.	TWA7:0	- TWI (Slave) Address
+			0.		TWGCE	- TWI General Call Recognition Enable Bit. If set, this bit enables the recognition of a General Call given over the 2-wire Serial Bus.
+		*/
+	TWBR = TWBRval;
+  7e:	8d e2       	ldi	r24, 0x2D	; 45
+  80:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__DATA_REGION_ORIGIN__+0x58>
+	TWSR |= (0<<TWPS1)|(0<<TWPS0);
+  84:	e9 eb       	ldi	r30, 0xB9	; 185
+  86:	f0 e0       	ldi	r31, 0x00	; 0
+  88:	80 81       	ld	r24, Z
+  8a:	80 83       	st	Z, r24
+	TWCR |= (1<<TWEA)|(1<<TWIE);
+  8c:	ec eb       	ldi	r30, 0xBC	; 188
+  8e:	f0 e0       	ldi	r31, 0x00	; 0
+  90:	80 81       	ld	r24, Z
+  92:	81 64       	ori	r24, 0x41	; 65
+  94:	80 83       	st	Z, r24
+				0.		UCPOL0		- Clock Polarity - 0-Transmit on Rising @ Receive on Falling, 1-Transmit on Falling @ Receive on Rising
+		
+			UCSZ02:0 Character Size:
+				000-5-bit, 001-6-bit, 010-7-bit, 011-8-bit, 111-9-bit
+		*/
+	UBRR0L = LO(bauddivider);
+  96:	89 e1       	ldi	r24, 0x19	; 25
+  98:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__DATA_REGION_ORIGIN__+0x64>
+	UBRR0H = HI(bauddivider);
+  9c:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__DATA_REGION_ORIGIN__+0x65>
+	UCSR0A = 0;
+  a0:	10 92 c0 00 	sts	0x00C0, r1	; 0x8000c0 <__DATA_REGION_ORIGIN__+0x60>
+	UCSR0B =	(1<<RXCIE0)	|	// The Interrupt when Receive Complete
+  a4:	88 e9       	ldi	r24, 0x98	; 152
+  a6:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__DATA_REGION_ORIGIN__+0x61>
+				(0<<UDRIE0)	|	// The Interrupt when Data Register Empty
+				(1<<RXEN0)	|	// Receiver enable
+				(1<<TXEN0)	|	// Transmitter enable
+				(0<<UCSZ02);
+	
+	UCSR0C = 	(0<<UMSEL01)|
+  aa:	86 e0       	ldi	r24, 0x06	; 6
+  ac:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__DATA_REGION_ORIGIN__+0x62>
+				(0<<UPM00)	|
+				(0<<USBS0)	|
+				(1<<UCSZ01)	|
+				(1<<UCSZ00);
+				
+	RXD_PORT |= 1<<RXD_BIT;		// Pull-Up Rx input for noise protection
+  b0:	58 9a       	sbi	0x0b, 0	; 11
+				ACI - Analog Comparator Interrupt Flag.
+				ACIE - Analog Comparator Interrupt Enable.
+				ACIC - 1 - enable the input capture function in Timer/Counter1 to be triggered by the analog comparator.
+				ACIS(1,0) - Analog Comparator Interrupt Mode Select: 00 - when output is toggle | 10 - on Falling Output Edge | 11 - on Rising Output Edge.
+		*/			
+	ACSR |= (1<<ACD)|
+  b2:	80 b7       	in	r24, 0x30	; 48
+  b4:	80 68       	ori	r24, 0x80	; 128
+  b6:	80 bf       	out	0x30, r24	; 48
+		
+			PCMSK0:
+				PCINT7...PCINT0 - Enable Pin Change Interrupt on each pin
+		*/
+	
+	sei();	
+  b8:	78 94       	sei
+  ba:	08 95       	ret
+
+000000bc <__vector_1>:
+	#define FlagName5 5
+	#define FlagName6 6
+	#define FlagName7 7
+
+/* Interrupt vectors */
+	EMPTY_INTERRUPT (INT0_vect)			// External Interrupt Request 0
+  bc:	18 95       	reti
+
+000000be <__vector_2>:
+	EMPTY_INTERRUPT (INT1_vect)			// External Interrupt Request 1
+  be:	18 95       	reti
+
+000000c0 <__vector_3>:
+	EMPTY_INTERRUPT (PCINT0_vect)		// Pin Change Interrupt Request 0
+  c0:	18 95       	reti
+
+000000c2 <__vector_4>:
+	EMPTY_INTERRUPT (PCINT1_vect)		// Pin Change Interrupt Request 1
+  c2:	18 95       	reti
+
+000000c4 <__vector_5>:
+	EMPTY_INTERRUPT (PCINT2_vect)		// Pin Change Interrupt Request 2
+  c4:	18 95       	reti
+
+000000c6 <__vector_6>:
+	EMPTY_INTERRUPT (WDT_vect)			// Watchdog Time-out Interrupt
+  c6:	18 95       	reti
+
+000000c8 <__vector_7>:
+	EMPTY_INTERRUPT (TIMER2_COMPA_vect)	// Timer/Counter2 Compare Match A
+  c8:	18 95       	reti
+
+000000ca <__vector_8>:
+	EMPTY_INTERRUPT (TIMER2_COMPB_vect)	// Timer/Counter2 Compare Match A
+  ca:	18 95       	reti
+
+000000cc <__vector_9>:
+	EMPTY_INTERRUPT (TIMER2_OVF_vect)	// Timer/Counter2 Overflow
+  cc:	18 95       	reti
+
+000000ce <__vector_10>:
+	EMPTY_INTERRUPT (TIMER1_CAPT_vect)	// Timer/Counter1 Capture Event
+  ce:	18 95       	reti
+
+000000d0 <__vector_11>:
+	EMPTY_INTERRUPT (TIMER1_COMPA_vect)	// Timer/Counter1 Compare Match A
+  d0:	18 95       	reti
+
+000000d2 <__vector_12>:
+	EMPTY_INTERRUPT (TIMER1_COMPB_vect)	// Timer/Counter1 Compare Match B
+  d2:	18 95       	reti
+
+000000d4 <__vector_13>:
+	EMPTY_INTERRUPT (TIMER1_OVF_vect)	// Timer/Counter1 Overflow
+  d4:	18 95       	reti
+
+000000d6 <__vector_14>:
+	EMPTY_INTERRUPT (TIMER0_COMPA_vect)	// TimerCounter0 Compare Match A 
+  d6:	18 95       	reti
+
+000000d8 <__vector_15>:
+	EMPTY_INTERRUPT (TIMER0_COMPB_vect)	// TimerCounter0 Compare Match B 
+  d8:	18 95       	reti
+
+000000da <__vector_16>:
+	EMPTY_INTERRUPT (TIMER0_OVF_vect)	// Timer/Couner0 Overflow
+  da:	18 95       	reti
+
+000000dc <__vector_17>:
+	EMPTY_INTERRUPT (SPI_STC_vect)		// SPI Serial Transfer Complete
+  dc:	18 95       	reti
+
+000000de <__vector_21>:
+	EMPTY_INTERRUPT (ADC_vect)			// ADC Conversion Complete
+  de:	18 95       	reti
+
+000000e0 <__vector_22>:
+	EMPTY_INTERRUPT (EE_READY_vect)		// EEPROM Ready
+  e0:	18 95       	reti
+
+000000e2 <__vector_23>:
+	EMPTY_INTERRUPT (ANALOG_COMP_vect)	// Analog Comparator
+  e2:	18 95       	reti
+
+000000e4 <__vector_25>:
+	EMPTY_INTERRUPT (SPM_Ready_vect)	// Store Program Memory Read
+  e4:	18 95       	reti
+
+000000e6 <__vector_19>:
+
+	EMPTY_INTERRUPT (USART_UDRE_vect)	// USART, Data Register Empty
+  e6:	18 95       	reti
+
+000000e8 <__vector_20>:
+	EMPTY_INTERRUPT (USART_TX_vect)		// USART Tx Complete
+  e8:	18 95       	reti
+
+000000ea <UARTSendChar>:
+	}
+}
+
+void UARTSendChar(int Char)
+{
+	while(!(UCSR0A & (1<<UDRE0)));
+  ea:	e0 ec       	ldi	r30, 0xC0	; 192
+  ec:	f0 e0       	ldi	r31, 0x00	; 0
+  ee:	90 81       	ld	r25, Z
+  f0:	95 ff       	sbrs	r25, 5
+  f2:	fd cf       	rjmp	.-6      	; 0xee <UARTSendChar+0x4>
+	UDR0 = Char;
+  f4:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
+  f8:	08 95       	ret
+
+000000fa <UpdatePreAmpDataArray>:
+
+bool UpdatePreAmpDataArray (uint8_t Register, uint8_t Value)
+{
+	bool Status = false;
+	
+	switch (Register)
+  fa:	82 30       	cpi	r24, 0x02	; 2
+  fc:	c1 f0       	breq	.+48     	; 0x12e <UpdatePreAmpDataArray+0x34>
+  fe:	18 f4       	brcc	.+6      	; 0x106 <UpdatePreAmpDataArray+0xc>
+ 100:	88 23       	and	r24, r24
+ 102:	31 f0       	breq	.+12     	; 0x110 <UpdatePreAmpDataArray+0x16>
+ 104:	33 c0       	rjmp	.+102    	; 0x16c <UpdatePreAmpDataArray+0x72>
+ 106:	83 30       	cpi	r24, 0x03	; 3
+ 108:	f1 f0       	breq	.+60     	; 0x146 <UpdatePreAmpDataArray+0x4c>
+ 10a:	84 30       	cpi	r24, 0x04	; 4
+ 10c:	41 f1       	breq	.+80     	; 0x15e <UpdatePreAmpDataArray+0x64>
+ 10e:	2e c0       	rjmp	.+92     	; 0x16c <UpdatePreAmpDataArray+0x72>
+	{
+		case CalledByUser_UpdateVolume:
+			if ( (Value+VolMin) > VolMax ) Status = false;
+ 110:	86 2f       	mov	r24, r22
+ 112:	90 e0       	ldi	r25, 0x00	; 0
+ 114:	84 52       	subi	r24, 0x24	; 36
+ 116:	9f 4f       	sbci	r25, 0xFF	; 255
+ 118:	8f 3f       	cpi	r24, 0xFF	; 255
+ 11a:	91 05       	cpc	r25, r1
+ 11c:	09 f0       	breq	.+2      	; 0x120 <UpdatePreAmpDataArray+0x26>
+ 11e:	44 f5       	brge	.+80     	; 0x170 <UpdatePreAmpDataArray+0x76>
+			else
+			{
+				PreAmpDataArray[PreAmpLeftVolumeRegister] = VolMin + Value;
+ 120:	64 52       	subi	r22, 0x24	; 36
+ 122:	e4 e0       	ldi	r30, 0x04	; 4
+ 124:	f1 e0       	ldi	r31, 0x01	; 1
+ 126:	60 83       	st	Z, r22
+				PreAmpDataArray[PreAmpRightVolumeRegister] = VolMin + Value;
+ 128:	61 83       	std	Z+1, r22	; 0x01
+				Status = true;
+ 12a:	81 e0       	ldi	r24, 0x01	; 1
+ 12c:	08 95       	ret
+			}
+			break;
+		
+		case CalledByUser_UpdateBass:
+			if ( (Value+BassMin) > BassMax ) Status = false;
+ 12e:	86 2f       	mov	r24, r22
+ 130:	90 e0       	ldi	r25, 0x00	; 0
+ 132:	8e 50       	subi	r24, 0x0E	; 14
+ 134:	9f 4f       	sbci	r25, 0xFF	; 255
+ 136:	8c 3f       	cpi	r24, 0xFC	; 252
+ 138:	91 05       	cpc	r25, r1
+ 13a:	e4 f4       	brge	.+56     	; 0x174 <UpdatePreAmpDataArray+0x7a>
+			else
+			{
+				PreAmpDataArray[PreAmpBassRegister] = BassMin + Value;
+ 13c:	6e 50       	subi	r22, 0x0E	; 14
+ 13e:	60 93 06 01 	sts	0x0106, r22	; 0x800106 <PreAmpDataArray+0x2>
+				Status = true;
+ 142:	81 e0       	ldi	r24, 0x01	; 1
+ 144:	08 95       	ret
+			}
+			break;
+
+		case CalledByUser_UpdateTreble:
+			if ( (Value+TrebleMin) > TrebleMax ) Status = false;
+ 146:	86 2f       	mov	r24, r22
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+ 14a:	8e 50       	subi	r24, 0x0E	; 14
+ 14c:	9f 4f       	sbci	r25, 0xFF	; 255
+ 14e:	8b 3f       	cpi	r24, 0xFB	; 251
+ 150:	91 05       	cpc	r25, r1
+ 152:	94 f4       	brge	.+36     	; 0x178 <UpdatePreAmpDataArray+0x7e>
+			else
+			{
+				PreAmpDataArray[PreAmpTrebleRegister] = TrebleMin + Value;
+ 154:	6e 50       	subi	r22, 0x0E	; 14
+ 156:	60 93 07 01 	sts	0x0107, r22	; 0x800107 <PreAmpDataArray+0x3>
+				Status = true;
+ 15a:	81 e0       	ldi	r24, 0x01	; 1
+ 15c:	08 95       	ret
+			}
+			break;
+		
+		case CalledByUser_UpdateSwitches:
+			PreAmpDataArray[PreAmpSwitchesRegister] = (PreAmpDataArray[PreAmpSwitchesRegister]|Value);
+ 15e:	e4 e0       	ldi	r30, 0x04	; 4
+ 160:	f1 e0       	ldi	r31, 0x01	; 1
+ 162:	84 81       	ldd	r24, Z+4	; 0x04
+ 164:	68 2b       	or	r22, r24
+ 166:	64 83       	std	Z+4, r22	; 0x04
+			Status = true;
+ 168:	81 e0       	ldi	r24, 0x01	; 1
+			break;
+ 16a:	08 95       	ret
+		
+		default:
+			Status = false;
+ 16c:	80 e0       	ldi	r24, 0x00	; 0
+ 16e:	08 95       	ret
+	bool Status = false;
+	
+	switch (Register)
+	{
+		case CalledByUser_UpdateVolume:
+			if ( (Value+VolMin) > VolMax ) Status = false;
+ 170:	80 e0       	ldi	r24, 0x00	; 0
+ 172:	08 95       	ret
+				Status = true;
+			}
+			break;
+		
+		case CalledByUser_UpdateBass:
+			if ( (Value+BassMin) > BassMax ) Status = false;
+ 174:	80 e0       	ldi	r24, 0x00	; 0
+ 176:	08 95       	ret
+				Status = true;
+			}
+			break;
+
+		case CalledByUser_UpdateTreble:
+			if ( (Value+TrebleMin) > TrebleMax ) Status = false;
+ 178:	80 e0       	ldi	r24, 0x00	; 0
+			Status = false;
+			break;
+	}
+	
+	return Status;
+}
+ 17a:	08 95       	ret
+
+0000017c <PreAmpComunicating>:
+		TWCR |= (1<<TWINT)|(1<<TWEN)|(1<<TWSTO);
+		NextRegisterToBeSend = 0;
+		UserFlags &= ~(1<<PreAmpComunicatingFlag);
+	}
+	
+	switch (Caller)
+ 17c:	65 30       	cpi	r22, 0x05	; 5
+ 17e:	19 f0       	breq	.+6      	; 0x186 <PreAmpComunicating+0xa>
+ 180:	6e 3f       	cpi	r22, 0xFE	; 254
+ 182:	81 f0       	breq	.+32     	; 0x1a4 <PreAmpComunicating+0x28>
+ 184:	08 95       	ret
+	{
+		case CalledByUser_UpdateAll:
+			NextRegisterToBeSend = 0;
+ 186:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <NextRegisterToBeSend.1938>
+			SendSingleRegister = False;
+ 18a:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <SendSingleRegister.1939>
+			UserFlags |= (1<<PreAmpComunicatingFlag);
+ 18e:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <UserFlags>
+ 192:	81 60       	ori	r24, 0x01	; 1
+ 194:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <UserFlags>
+		#define False 0
+		#define True 1
+	
+	void StartCommunication ()
+	{
+		TWCR |= (1<<TWSTA)|(1<<TWINT)|(1<<TWEN);
+ 198:	ec eb       	ldi	r30, 0xBC	; 188
+ 19a:	f0 e0       	ldi	r31, 0x00	; 0
+ 19c:	80 81       	ld	r24, Z
+ 19e:	84 6a       	ori	r24, 0xA4	; 164
+ 1a0:	80 83       	st	Z, r24
+ 1a2:	08 95       	ret
+			UserFlags |= (1<<PreAmpComunicatingFlag);
+			StartCommunication();
+			break;
+	
+		case CalledByTWIInterruptWorker:
+			switch (BusState)
+ 1a4:	80 31       	cpi	r24, 0x10	; 16
+ 1a6:	49 f0       	breq	.+18     	; 0x1ba <PreAmpComunicating+0x3e>
+ 1a8:	18 f4       	brcc	.+6      	; 0x1b0 <PreAmpComunicating+0x34>
+ 1aa:	88 30       	cpi	r24, 0x08	; 8
+ 1ac:	31 f0       	breq	.+12     	; 0x1ba <PreAmpComunicating+0x3e>
+ 1ae:	08 95       	ret
+ 1b0:	88 31       	cpi	r24, 0x18	; 24
+ 1b2:	61 f0       	breq	.+24     	; 0x1cc <PreAmpComunicating+0x50>
+ 1b4:	88 32       	cpi	r24, 0x28	; 40
+ 1b6:	29 f1       	breq	.+74     	; 0x202 <PreAmpComunicating+0x86>
+ 1b8:	08 95       	ret
+			{
+				case SendedStart: case SendedReStart:
+					TWDR = PreAmpWriteAddresss;		// Sending SLAW
+ 1ba:	82 e8       	ldi	r24, 0x82	; 130
+ 1bc:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__DATA_REGION_ORIGIN__+0x5b>
+					TWCR |= (~(1<<TWSTA))|(1<<TWINT)|(1<<TWEN);
+ 1c0:	ec eb       	ldi	r30, 0xBC	; 188
+ 1c2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1c4:	80 81       	ld	r24, Z
+ 1c6:	8f 6d       	ori	r24, 0xDF	; 223
+ 1c8:	80 83       	st	Z, r24
+					break;
+ 1ca:	08 95       	ret
+			
+				case SendedSLAW_ACK:		// Sending Register Address
+					TWDR = (NextRegisterToBeSend == PreAmpSwitchesRegister) ? (PreAmpSwitchesRegister+PreAmpSwitchesRegisterAddressOffset) : NextRegisterToBeSend;
+ 1cc:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 1d0:	84 30       	cpi	r24, 0x04	; 4
+ 1d2:	19 f0       	breq	.+6      	; 0x1da <PreAmpComunicating+0x5e>
+ 1d4:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 1d8:	01 c0       	rjmp	.+2      	; 0x1dc <PreAmpComunicating+0x60>
+ 1da:	88 e0       	ldi	r24, 0x08	; 8
+ 1dc:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__DATA_REGION_ORIGIN__+0x5b>
+					TWCR |= (1<<TWINT)|(1<<TWEN);
+ 1e0:	ec eb       	ldi	r30, 0xBC	; 188
+ 1e2:	f0 e0       	ldi	r31, 0x00	; 0
+ 1e4:	80 81       	ld	r24, Z
+ 1e6:	84 68       	ori	r24, 0x84	; 132
+ 1e8:	80 83       	st	Z, r24
+					if (SendSingleRegister == False) NextRegisterToBeSend++;
+ 1ea:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <SendSingleRegister.1939>
+ 1ee:	81 11       	cpse	r24, r1
+ 1f0:	05 c0       	rjmp	.+10     	; 0x1fc <PreAmpComunicating+0x80>
+ 1f2:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 1f6:	8f 5f       	subi	r24, 0xFF	; 255
+ 1f8:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <NextRegisterToBeSend.1938>
+					WhatBeenSended = RegisterSent;
+ 1fc:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <_edata>
+					break;
+ 200:	08 95       	ret
+			
+				case SendedData_ACK:
+					if (WhatBeenSended == RegisterSent)
+ 202:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <_edata>
+ 206:	81 11       	cpse	r24, r1
+ 208:	1c c0       	rjmp	.+56     	; 0x242 <PreAmpComunicating+0xc6>
+					{
+						TWDR = (SendSingleRegister == True) ? PreAmpDataArray[NextRegisterToBeSend] : PreAmpDataArray[(NextRegisterToBeSend-1)];
+ 20a:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <SendSingleRegister.1939>
+ 20e:	81 30       	cpi	r24, 0x01	; 1
+ 210:	39 f4       	brne	.+14     	; 0x220 <PreAmpComunicating+0xa4>
+ 212:	e0 91 02 01 	lds	r30, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 216:	f0 e0       	ldi	r31, 0x00	; 0
+ 218:	ec 5f       	subi	r30, 0xFC	; 252
+ 21a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 21c:	80 81       	ld	r24, Z
+ 21e:	06 c0       	rjmp	.+12     	; 0x22c <PreAmpComunicating+0xb0>
+ 220:	e0 91 02 01 	lds	r30, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 224:	f0 e0       	ldi	r31, 0x00	; 0
+ 226:	ed 5f       	subi	r30, 0xFD	; 253
+ 228:	fe 4f       	sbci	r31, 0xFE	; 254
+ 22a:	80 81       	ld	r24, Z
+ 22c:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__DATA_REGION_ORIGIN__+0x5b>
+						TWCR |= (1<<TWINT)|(1<<TWEN);
+ 230:	ec eb       	ldi	r30, 0xBC	; 188
+ 232:	f0 e0       	ldi	r31, 0x00	; 0
+ 234:	80 81       	ld	r24, Z
+ 236:	84 68       	ori	r24, 0x84	; 132
+ 238:	80 83       	st	Z, r24
+						WhatBeenSended = DataSent;
+ 23a:	81 e0       	ldi	r24, 0x01	; 1
+ 23c:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <_edata>
+ 240:	08 95       	ret
+					}
+					else
+					{
+						if (SendSingleRegister == True) StopCommunication();
+ 242:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <SendSingleRegister.1939>
+ 246:	81 30       	cpi	r24, 0x01	; 1
+ 248:	11 f4       	brne	.+4      	; 0x24e <PreAmpComunicating+0xd2>
+ 24a:	04 df       	rcall	.-504    	; 0x54 <StopCommunication.1942>
+ 24c:	08 95       	ret
+						else
+						{
+							if (NextRegisterToBeSend <= PreAmpSwitchesRegister) StartCommunication();
+ 24e:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <NextRegisterToBeSend.1938>
+ 252:	85 30       	cpi	r24, 0x05	; 5
+ 254:	30 f4       	brcc	.+12     	; 0x262 <PreAmpComunicating+0xe6>
+		#define False 0
+		#define True 1
+	
+	void StartCommunication ()
+	{
+		TWCR |= (1<<TWSTA)|(1<<TWINT)|(1<<TWEN);
+ 256:	ec eb       	ldi	r30, 0xBC	; 188
+ 258:	f0 e0       	ldi	r31, 0x00	; 0
+ 25a:	80 81       	ld	r24, Z
+ 25c:	84 6a       	ori	r24, 0xA4	; 164
+ 25e:	80 83       	st	Z, r24
+ 260:	08 95       	ret
+					{
+						if (SendSingleRegister == True) StopCommunication();
+						else
+						{
+							if (NextRegisterToBeSend <= PreAmpSwitchesRegister) StartCommunication();
+							else StopCommunication();
+ 262:	f8 de       	rcall	.-528    	; 0x54 <StopCommunication.1942>
+ 264:	08 95       	ret
+
+00000266 <__vector_24>:
+
+	EMPTY_INTERRUPT (USART_UDRE_vect)	// USART, Data Register Empty
+	EMPTY_INTERRUPT (USART_TX_vect)		// USART Tx Complete
+
+ISR (TWI_vect)		// The Two-wire Serial Interface Interrupt Worker.
+{
+ 266:	1f 92       	push	r1
+ 268:	0f 92       	push	r0
+ 26a:	0f b6       	in	r0, 0x3f	; 63
+ 26c:	0f 92       	push	r0
+ 26e:	11 24       	eor	r1, r1
+ 270:	2f 93       	push	r18
+ 272:	3f 93       	push	r19
+ 274:	4f 93       	push	r20
+ 276:	5f 93       	push	r21
+ 278:	6f 93       	push	r22
+ 27a:	7f 93       	push	r23
+ 27c:	8f 93       	push	r24
+ 27e:	9f 93       	push	r25
+ 280:	af 93       	push	r26
+ 282:	bf 93       	push	r27
+ 284:	ef 93       	push	r30
+ 286:	ff 93       	push	r31
+	uint8_t BusState = (TWSR & TWSRMask);
+ 288:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__DATA_REGION_ORIGIN__+0x59>
+	
+	/* Do Reset the TWINT flag by writing 1 into him! */
+	TWCR |= 1<<TWINT;
+ 28c:	ec eb       	ldi	r30, 0xBC	; 188
+ 28e:	f0 e0       	ldi	r31, 0x00	; 0
+ 290:	90 81       	ld	r25, Z
+ 292:	90 68       	ori	r25, 0x80	; 128
+ 294:	90 83       	st	Z, r25
+	sei();
+ 296:	78 94       	sei
+	if (UserFlags & (1<<PreAmpComunicatingFlag)) PreAmpComunicating(BusState, CalledByTWIInterruptWorker);
+ 298:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <UserFlags>
+ 29c:	90 ff       	sbrs	r25, 0
+ 29e:	03 c0       	rjmp	.+6      	; 0x2a6 <__vector_24+0x40>
+ 2a0:	6e ef       	ldi	r22, 0xFE	; 254
+ 2a2:	88 7f       	andi	r24, 0xF8	; 248
+ 2a4:	6b df       	rcall	.-298    	; 0x17c <PreAmpComunicating>
+}
+ 2a6:	ff 91       	pop	r31
+ 2a8:	ef 91       	pop	r30
+ 2aa:	bf 91       	pop	r27
+ 2ac:	af 91       	pop	r26
+ 2ae:	9f 91       	pop	r25
+ 2b0:	8f 91       	pop	r24
+ 2b2:	7f 91       	pop	r23
+ 2b4:	6f 91       	pop	r22
+ 2b6:	5f 91       	pop	r21
+ 2b8:	4f 91       	pop	r20
+ 2ba:	3f 91       	pop	r19
+ 2bc:	2f 91       	pop	r18
+ 2be:	0f 90       	pop	r0
+ 2c0:	0f be       	out	0x3f, r0	; 63
+ 2c2:	0f 90       	pop	r0
+ 2c4:	1f 90       	pop	r1
+ 2c6:	18 95       	reti
+
+000002c8 <__vector_18>:
+
+ISR (USART_RX_vect)	// USART Rx Complete
+{
+ 2c8:	1f 92       	push	r1
+ 2ca:	0f 92       	push	r0
+ 2cc:	0f b6       	in	r0, 0x3f	; 63
+ 2ce:	0f 92       	push	r0
+ 2d0:	11 24       	eor	r1, r1
+ 2d2:	2f 93       	push	r18
+ 2d4:	3f 93       	push	r19
+ 2d6:	4f 93       	push	r20
+ 2d8:	5f 93       	push	r21
+ 2da:	6f 93       	push	r22
+ 2dc:	7f 93       	push	r23
+ 2de:	8f 93       	push	r24
+ 2e0:	9f 93       	push	r25
+ 2e2:	af 93       	push	r26
+ 2e4:	bf 93       	push	r27
+ 2e6:	ef 93       	push	r30
+ 2e8:	ff 93       	push	r31
+	
+	// Firstly read the information about received byte
+	if (UCSR0A & (1<<FE0 | 1<<DOR0 | 1<<UPE0)) UARTSendChar('E');
+ 2ea:	80 91 c0 00 	lds	r24, 0x00C0	; 0x8000c0 <__DATA_REGION_ORIGIN__+0x60>
+ 2ee:	8c 71       	andi	r24, 0x1C	; 28
+ 2f0:	21 f0       	breq	.+8      	; 0x2fa <__vector_18+0x32>
+ 2f2:	85 e4       	ldi	r24, 0x45	; 69
+ 2f4:	90 e0       	ldi	r25, 0x00	; 0
+ 2f6:	f9 de       	rcall	.-526    	; 0xea <UARTSendChar>
+ 2f8:	25 c0       	rjmp	.+74     	; 0x344 <__vector_18+0x7c>
+	else
+	{
+		uint8_t UARTData = UDR0;
+ 2fa:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
+		bool Status = false;
+		uint8_t Value = 0;
+		switch (UARTData)
+ 2fe:	85 30       	cpi	r24, 0x05	; 5
+ 300:	28 f4       	brcc	.+10     	; 0x30c <__vector_18+0x44>
+ 302:	82 30       	cpi	r24, 0x02	; 2
+ 304:	30 f4       	brcc	.+12     	; 0x312 <__vector_18+0x4a>
+ 306:	88 23       	and	r24, r24
+ 308:	21 f0       	breq	.+8      	; 0x312 <__vector_18+0x4a>
+ 30a:	19 c0       	rjmp	.+50     	; 0x33e <__vector_18+0x76>
+ 30c:	85 30       	cpi	r24, 0x05	; 5
+ 30e:	99 f0       	breq	.+38     	; 0x336 <__vector_18+0x6e>
+ 310:	16 c0       	rjmp	.+44     	; 0x33e <__vector_18+0x76>
+		{
+			case CalledByUser_UpdateVolume: case CalledByUser_UpdateBass: case CalledByUser_UpdateTreble: case CalledByUser_UpdateSwitches:
+				while(!(UCSR0A & (1<<RXC0)));
+ 312:	e0 ec       	ldi	r30, 0xC0	; 192
+ 314:	f0 e0       	ldi	r31, 0x00	; 0
+ 316:	90 81       	ld	r25, Z
+ 318:	99 23       	and	r25, r25
+ 31a:	ec f7       	brge	.-6      	; 0x316 <__vector_18+0x4e>
+				Value = UDR0;
+ 31c:	60 91 c6 00 	lds	r22, 0x00C6	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
+				Status = UpdatePreAmpDataArray(UARTData, Value);
+ 320:	ec de       	rcall	.-552    	; 0xfa <UpdatePreAmpDataArray>
+						if (Status == true) UARTSendChar('O');
+ 322:	88 23       	and	r24, r24
+ 324:	21 f0       	breq	.+8      	; 0x32e <__vector_18+0x66>
+ 326:	8f e4       	ldi	r24, 0x4F	; 79
+ 328:	90 e0       	ldi	r25, 0x00	; 0
+ 32a:	df de       	rcall	.-578    	; 0xea <UARTSendChar>
+ 32c:	0b c0       	rjmp	.+22     	; 0x344 <__vector_18+0x7c>
+						else UARTSendChar('E');
+ 32e:	85 e4       	ldi	r24, 0x45	; 69
+ 330:	90 e0       	ldi	r25, 0x00	; 0
+ 332:	db de       	rcall	.-586    	; 0xea <UARTSendChar>
+ 334:	07 c0       	rjmp	.+14     	; 0x344 <__vector_18+0x7c>
+				break;
+			
+			case CalledByUser_UpdateAll:
+				PreAmpComunicating(0xff,CalledByUser_UpdateAll);
+ 336:	65 e0       	ldi	r22, 0x05	; 5
+ 338:	8f ef       	ldi	r24, 0xFF	; 255
+ 33a:	20 df       	rcall	.-448    	; 0x17c <PreAmpComunicating>
+				break;
+ 33c:	03 c0       	rjmp	.+6      	; 0x344 <__vector_18+0x7c>
+			
+			default:
+				UARTSendChar('E');
+ 33e:	85 e4       	ldi	r24, 0x45	; 69
+ 340:	90 e0       	ldi	r25, 0x00	; 0
+ 342:	d3 de       	rcall	.-602    	; 0xea <UARTSendChar>
+				break;
+		}
+		
+	}
+}
+ 344:	ff 91       	pop	r31
+ 346:	ef 91       	pop	r30
+ 348:	bf 91       	pop	r27
+ 34a:	af 91       	pop	r26
+ 34c:	9f 91       	pop	r25
+ 34e:	8f 91       	pop	r24
+ 350:	7f 91       	pop	r23
+ 352:	6f 91       	pop	r22
+ 354:	5f 91       	pop	r21
+ 356:	4f 91       	pop	r20
+ 358:	3f 91       	pop	r19
+ 35a:	2f 91       	pop	r18
+ 35c:	0f 90       	pop	r0
+ 35e:	0f be       	out	0x3f, r0	; 63
+ 360:	0f 90       	pop	r0
+ 362:	1f 90       	pop	r1
+ 364:	18 95       	reti
+
+00000366 <main>:
+
+
+
+void main (void) {
+	
+	InternalModulesInitialization ();
+ 366:	83 de       	rcall	.-762    	; 0x6e <InternalModulesInitialization>
+ 368:	ff cf       	rjmp	.-2      	; 0x368 <main+0x2>
+
+0000036a <_exit>:
+ 36a:	f8 94       	cli
+
+0000036c <__stop_program>:
+ 36c:	ff cf       	rjmp	.-2      	; 0x36c <__stop_program>

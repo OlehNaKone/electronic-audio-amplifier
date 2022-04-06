@@ -1,0 +1,2719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1172</width>
+    <height>1006</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>240</y>
+      <width>361</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Graphic Equalizer</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>39</y>
+       <width>341</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="4" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>42</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>42</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>260 Hz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_6">
+        <property name="minimumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>3 kHz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_14">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-14</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QSlider" name="verticalSlider_6">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-7</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>7</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="7" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_17">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-14</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QSlider" name="verticalSlider_5">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-7</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>7</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QSlider" name="verticalSlider_2">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-47</number>
+        </property>
+        <property name="maximum">
+         <number>0</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>47</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" alignment="Qt::AlignHCenter">
+       <widget class="QSlider" name="verticalSlider_3">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-7</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>7</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_12">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-14</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_15">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-14</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_4">
+        <property name="minimumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1 kHz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4" alignment="Qt::AlignHCenter">
+       <widget class="QSlider" name="verticalSlider_4">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-7</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>7</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLabel" name="label_7">
+        <property name="minimumSize">
+         <size>
+          <width>41</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>10 kHz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QSlider" name="verticalSlider_7">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-7</number>
+        </property>
+        <property name="maximum">
+         <number>7</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>7</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_16">
+        <property name="minimumSize">
+         <size>
+          <width>21</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>21</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-14</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_5">
+        <property name="minimumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>34</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>60 Hz</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QCheckBox" name="checkBox">
+          <property name="minimumSize">
+           <size>
+            <width>70</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Enable</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>480</y>
+      <width>181</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Loudness</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>161</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_20">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_5">
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="checkBox_4">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>High Boost</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QSlider" name="verticalSlider_10">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>120</height>
+         </size>
+        </property>
+        <property name="minimum">
+         <number>-47</number>
+        </property>
+        <property name="maximum">
+         <number>0</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>47</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_22">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QRadioButton" name="radioButton_11">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Flat</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_12">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>400 Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_13">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>800 Hz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_14">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>71</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>2.4 kHz</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>480</y>
+      <width>231</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Bass</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>51</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="2" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_28">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_12">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_26">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>40</y>
+       <width>81</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QRadioButton" name="radioButton_15">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>60 Hz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_16">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>80 Hz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_17">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>100 Hz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_18">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>200 Hz</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>85</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>85</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>85</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Soft Step</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_8">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>96</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>DC mode</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>73</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <widget class="QRadioButton" name="radioButton_19">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_20">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.25</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_21">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_22">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>2.0</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>480</y>
+      <width>231</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Middle</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>51</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_7">
+      <item row="2" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_29">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_13">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_27">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>40</y>
+       <width>81</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="QRadioButton" name="radioButton_23">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>500 Hz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_24">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1 kHz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_25">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.5 kHz</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_26">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>2.5 kHz</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_9">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>85</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>85</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>85</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Soft Step</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>73</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_11">
+      <item>
+       <widget class="QRadioButton" name="radioButton_27">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0.5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_28">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>0.75</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_29">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_30">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>71</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>1.25</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>480</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Trebble</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_9">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_21">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_24">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_15">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_12">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QRadioButton" name="radioButton_9">
+          <property name="text">
+           <string>10 kHz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_8">
+          <property name="text">
+           <string>12.5 kHz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="text">
+           <string>15 kHz</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="text">
+           <string>17.5 kHz</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>480</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Volume</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_30">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_31">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_16">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_13">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Main Source</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>194</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_11">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_23">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_25">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_17">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_14">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Auto Zero</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item>
+         <widget class="QRadioButton" name="radioButton_10">
+          <property name="text">
+           <string>QD</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_31">
+          <property name="text">
+           <string>SE 1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_32">
+          <property name="text">
+           <string>SE 2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_33">
+          <property name="text">
+           <string>SE 3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_34">
+          <property name="text">
+           <string>SE 4</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_35">
+          <property name="text">
+           <string>Mute</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_11">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Front Left</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_12">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_32">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_33">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_15">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_18">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_15">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_12">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Front Right</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_13">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_34">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_35">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_16">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_19">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_16">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_13">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Rear Left</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_14">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_14">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_36">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_37">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_17">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_20">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_17">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_14">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Rear Right</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_15">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_38">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_39">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_18">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_21">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_18">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_15">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Second Source</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>194</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_16">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_40">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_41">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_22">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_20">
+        <item>
+         <widget class="QRadioButton" name="radioButton_36">
+          <property name="text">
+           <string>QD</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_37">
+          <property name="text">
+           <string>SE 1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_38">
+          <property name="text">
+           <string>SE 2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_39">
+          <property name="text">
+           <string>SE 3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_40">
+          <property name="text">
+           <string>SE 4</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_41">
+          <property name="text">
+           <string>Mute</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_16">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Subwoofer</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_17">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_42">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_43">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_21">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_23">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_19">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_17">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>720</y>
+      <width>171</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Mixing</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>151</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_18">
+      <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_44">
+        <property name="minimumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Level</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <widget class="QLabel" name="label_45">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>-17.625</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_22">
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QSlider" name="verticalSlider_24">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>120</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>-47</number>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TicksBothSides</enum>
+          </property>
+          <property name="tickInterval">
+           <number>47</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="checkBox_20">
+        <property name="minimumSize">
+         <size>
+          <width>85</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Soft Step</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>verticalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>320</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>verticalSlider_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_12</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
